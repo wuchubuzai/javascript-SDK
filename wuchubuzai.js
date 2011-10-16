@@ -1,5 +1,13 @@
 /*! wuchubuzai api javascript v1.0.0 http://www.wuchubuzai.com/ */
 
+function getEnv() { 
+    if (typeof env =="undefined") { 
+        return 'production';
+    } else { 
+        return env;
+    }
+}
+
 function getAPIUrl() {
     var env = getEnv();
     if (env == "production") {
