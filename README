@@ -1,0 +1,8 @@
+Wuchubuzai JavaScript SDK
+http://www.wuchubuzai.com/
+
+This repository contains the open source JavaScript SDK that allows you to utilize Wuchubuzai on your website.
+
+Requirements
+------------
+jQuery 1.6.4 -- http://jquery.org/
