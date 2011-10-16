@@ -8,9 +8,10 @@ function getAPIUrl(env) {
     }
 }
 
-function wuchu_rest_api(env, action, query, callback, debug) {
+function wuchu_rest_api(env, resource, action, query, callback, debug) {
+	if (typeof resource == "undefined") { throw "resourceRequired"; }
     try {
-    	var url = getAPIUrl(env);
+    	var url = getAPIUrl(env) + '/' + resource + '/';
         if ($.browser.msie) {
             var xdr = new XDomainRequest();
             if (query !== null) {
