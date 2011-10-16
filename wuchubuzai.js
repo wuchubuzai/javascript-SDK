@@ -1,45 +1,23 @@
 /*! wuchubuzai api javascript v1.0.0 http://www.wuchubuzai.com/ */
 
-function getEnv() { 
-    if (typeof env =="undefined") { 
-        return 'production';
-    } else { 
-        return env;
-    }
-}
-
-function getAPIUrl() {
-    var env = getEnv();
-    if (env == "production") {
+function getAPIUrl(env) {
+	if(typeof env=="undefined" || env == "production") {
         return "http://api.wuchubuzai.com";
     } else {
         return "http://" + env + ".api.wuchubuzai.com";
     }
 }
 
-function getSiteUrl() {
-    var env = getEnv();
-    if (env == "production") {
-        return "http://www.wuchubuzai.com";
-    } else {
-        return "http://" + env + ".wuchubuzai.com";
-    }
-}
-
-function wuchu_rest_api(url, action, query, callback, debug) {
+function wuchu_rest_api(env, action, query, callback, debug) {
     try {
-/*
-    	if (action.toLowerCase() != "get" && action.toLowerCase() != "post") {
-            throw "Unsupported action";
-        }
-*/
+    	var url = getAPIUrl(env);
         if ($.browser.msie) {
             var xdr = new XDomainRequest();
             if (query !== null) {
-                if (action == "POST") {
+                if (action != "GET") {
                     xdr.open(action, url);
                     xdr.send($.param(query));
-                } else if (action == "GET") {
+                } else {
                     xdr.open(action, url + "?" + $.param(query));
                 }
             } else {
