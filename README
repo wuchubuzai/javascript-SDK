@@ -6,6 +6,7 @@ This repository contains the open source JavaScript SDK that allows you to utili
 Requirements
 ------------
 jQuery 1.6.4 -- http://jquery.com/ || http://code.jquery.com/jquery-1.6.4.min.js
+(Tested successfully with jQuery v1.7.1)
 
 Example Usage
 -------------
