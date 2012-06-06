@@ -13,6 +13,6 @@ Example Usage
 
 http://jsfiddle.net/sdolgy/JL2St/3/ -- Sets environment, gets API url, performs a GET request against the 'reference' object
 http://jsfiddle.net/sdolgy/JL2St/4/ -- Load the API with the SEARCH argument and no rest_key to force error
-
+http://jsfiddle.net/sdolgy/d2fGq/ -- Authenticate with username/password to obtain rest_key and other information from authentication
 
 © wuchubuzai | 无处不在 2011
